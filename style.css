@@ -1,0 +1,108 @@
+/* General body styles */
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    flex-direction: column;
+}
+
+/* Container styles */
+#container {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+/* Sudoku grid styles */
+#sudoku {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(9, 60px);
+    grid-template-rows: repeat(9, 60px);
+    gap: 0;
+    border: 1px solid #000000;
+}
+
+/* Cell styles */
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+/* Input styles */
+input {
+    font-size: 40px;
+}
+
+/* Correct and wrong cell styles */
+.correct {
+    background-color: #28a745;
+}
+
+.wrong {
+    background-color: #dc3545;
+}
+
+/* Button styles */
+button {
+    display: flex;
+    align-items: center;
+    border-radius: 20%;
+    font-size: 20px; /* Adjusted font size for better readability on mobile */
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 5px; /* Add margin for spacing between buttons */
+}
+
+/* Solve button styles */
+#solve {
+    background-color: #28a745;
+}
+#solve:hover {
+    background-color: #1be249;
+}
+
+/* Back button styles */
+#back {
+    background-color: #007bff;
+}
+#back:hover {
+    background-color: #0056b3;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    #sudoku {
+        grid-template-columns: repeat(9, 40px);
+        grid-template-rows: repeat(9, 40px);
+    }
+
+    .cell {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
